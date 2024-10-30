@@ -17,3 +17,5 @@ FUTURE-TOPICS
 
 # Ignore .pem files
 *.pem
+**/*.pem
+**/**/*.pem
