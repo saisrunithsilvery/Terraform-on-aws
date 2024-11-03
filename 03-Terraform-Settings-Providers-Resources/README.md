@@ -1,12 +1,12 @@
 # Terraform Settings, Providers & Resource Blocks
-## Step-01: Introduction
+
 - [Terraform Settings](https://www.terraform.io/docs/language/settings/index.html)
 - [Terraform Providers](https://www.terraform.io/docs/providers/index.html)
 - [Terraform Resources](https://www.terraform.io/docs/language/resources/index.html)
 - [Terraform File Function](https://www.terraform.io/docs/language/functions/file.html)
 - Create EC2 Instance using Terraform and provision a webserver with userdata. 
 
-## Step-02: In c1-versions.tf - Create Terraform Settings Block
+ - Create Terraform Settings Block
 - Understand about [Terraform Settings Block](https://www.terraform.io/docs/language/settings/index.html) and create it
 ```t
 terraform {
@@ -18,9 +18,7 @@ terraform {
     }
   }
 }
-```
-
-## Step-03: In c1-versions.tf - Create Terraform Providers Block 
+- Create Terraform Providers Block 
 - Understand about [Terraform Providers](https://www.terraform.io/docs/providers/index.html)
 - Configure AWS Credentials in the AWS CLI if not configured
 ```t
@@ -125,19 +123,4 @@ rm -rf .terraform*
 rm -rf terraform.tfstate*
 ```
 
-
-## Step-10: Additional Observations - Concepts we will learn in next section
-- EC2 Instance created we didn't associate a EC2 Key pair to login to EC2 Instance 
-  - Terraform Resource Argument - `Key Name`
-- AMI Name is static - How to make it Dynamic ?
-  - Use `Terraform Datasources` concept
-- We didn't create multiple instances of same EC2 Instance
-  - Resource Meta-Argument: `count` 
-- We didn't add any variables for parameterizations
-  - Terraform `Input Variable` Basics
-- We didn't extract any information on terminal about instance information 
-  -  Terraform `Outputs`
-- Create second resource only after first resource is created
-  - Defining Explicit Dependency in Terraform using Resource Meta-Argument `depends_on`
-- WE ARE GOING TO LEARN ALL THE ABOVE CONCEPTS IN NEXT SECTION
   
